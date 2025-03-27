@@ -9,7 +9,7 @@ export function mean(numbers: number[]): number {
 
 export function median(numbers: number[]): number {
   if (numbers.length === 0) {
-    return NaN;
+    throw new Error("Median with no elements is not allowed.");
   }
   const sorted: number[] = numbers.sort();
   const middle: number = Math.floor(sorted.length / 2);
